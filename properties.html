@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties for Sale in Kenya | Verified Real Estate Listings - Property by Fridah</title>
+    <meta name="description" content="Browse verified homes and land for sale in Kitengela, Juja, Ruiru, Thika & Athi River. All properties vetted with clean documentation. WhatsApp us today for listings.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="#">
+    
+   <link rel="stylesheet" href="properties.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+     <header>
+      <div class="container">
+        <nav class="navbar">
+           <a href="index.html" class="logo">
+          <img
+            src="Property By Fridah favicon.webp"
+            alt="Property By Fridah favicon Logo"
+            class="logo-img"
+          />
+        </a>
+          <ul class="nav-links" id="navLinks">
+           <li><a href="/">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html#areas">Locations</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <div class="mobile-menu" id="mobileMenu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Properties for Sale in Kenya – Verified by Property By Fridah</h1>
+            <p>Browse verified homes and land in Kitengela, Juja, Ruiru, Thika & Athi River. All listings are vetted with clean documentation and guided site visits.</p>
+            <div class="header-btns">
+                <a href="https://wa.me/254721911181" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us for Listings
+                </a>
+                <a href="#contact" class="btn btn-secondary">Book a Site Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Filters -->
+    <section class="property-filters">
+        <div class="container">
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="location">📍 Location</label>
+                    <select id="location" class="filter-select">
+                        <option value="all">All Locations</option>
+                        <option value="kitengela">Kitengela</option>
+                        <option value="juja">Juja</option>
+                        <option value="ruiru">Ruiru</option>
+                        <option value="thika">Thika</option>
+                        <option value="athi-river">Athi River</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="property-type">🏠 Property Type</label>
+                    <select id="property-type" class="filter-select">
+                        <option value="all">All Properties</option>
+                        <option value="house">House / Bungalow</option>
+                        <option value="plot">Land / Plot</option>
+                        <option value="apartment">Apartment</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-range">💰 Price Range</label>
+                    <select id="price-range" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="under-5m">Under KES 5M</option>
+                        <option value="5m-10m">KES 5M - 10M</option>
+                        <option value="10m-20m">KES 10M - 20M</option>
+                        <option value="over-20m">Over KES 20M</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="bedrooms">📐 Bedrooms</label>
+                    <select id="bedrooms" class="filter-select">
+                        <option value="all">Any</option>
+                        <option value="1">1 Bedroom</option>
+                        <option value="2">2 Bedrooms</option>
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4+">4+ Bedrooms</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="status">📌 Status</label>
+                    <select id="status" class="filter-select">
+                        <option value="available">Available</option>
+                        <option value="all">All Status</option>
+                        <option value="sold">Sold</option>
+                        <option value="reserved">Reserved</option>
+                    </select>
+                </div>
+                
+                <div class="filter-btns">
+                    <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                    <button id="resetFilters" class="btn btn-outline">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Property 1 - 3 Bedroom Bungalow in Kitengela -->
+                <div class="property-card" data-location="kitengela" data-type="house" data-price="7.5m" data-bedrooms="3" data-status="available">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="3-Bedroom Bungalow in Acacia Estate, Kitengela">
+                        <div class="property-badge badge-new">NEW</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 7,500,000</div>
+                        <h3 class="property-title">3-Bedroom Bungalow</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Acacia Estate, Kitengela
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 Beds</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Baths</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>2 Parking</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span>1/8 Acre</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%203-Bedroom%20Bungalow%20in%20Acacia%20Estate,%20Kitengela%20(KES%207,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 - Residential Plot in Ruiru -->
+                <div class="property-card" data-location="ruiru" data-type="plot" data-price="4.5m" data-bedrooms="0" data-status="available">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Residential Plot in Legacy Ridges, Ruiru">
+                        <div class="property-badge badge-new">NEW</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 4,500,000</div>
+                        <h3 class="property-title">Residential Plot</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Legacy Ridges, Ruiru
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span>50×100 ft</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tint"></i>
+                                <span>Water</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Electricity</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-road"></i>
+                                <span>Graded</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%20Residential%20Plot%20in%20Legacy%20Ridges,%20Ruiru%20(KES%204,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 - 2-Bedroom Apartment in Kitengela -->
+                <div class="property-card" data-location="kitengela" data-type="apartment" data-price="4.8m" data-bedrooms="2" data-status="reserved">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="2-Bedroom Apartment in Milimani, Kitengela">
+                        <div class="property-badge badge-reserved">RESERVED</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 4,800,000</div>
+                        <h3 class="property-title">2-Bedroom Apartment</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Milimani, Kitengela
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Beds</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Baths</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>1 Parking</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-building"></i>
+                                <span>Gated</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%202-Bedroom%20Apartment%20in%20Milimani,%20Kitengela" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Similar Units
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 4 - Land Plot in Juja -->
+                <div class="property-card" data-location="juja" data-type="plot" data-price="2.5m" data-bedrooms="0" data-status="available">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Land Plot in Juja">
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 2,500,000</div>
+                        <h3 class="property-title">1/8 Acre Plot</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Vantage View Estate, Juja
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span>1/8 Acre</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tint"></i>
+                                <span>Water</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Electricity</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-lock"></i>
+                                <span>Gated</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%201/8%20Acre%20Plot%20in%20Vantage%20View%20Estate,%20Juja%20(KES%202,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 5 - 4-Bedroom Villa in Thika -->
+                <div class="property-card" data-location="thika" data-type="house" data-price="12.5m" data-bedrooms="4" data-status="available">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="4-Bedroom Villa in Thika">
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 12,500,000</div>
+                        <h3 class="property-title">4-Bedroom Villa</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Thika Grove Estate, Thika
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Beds</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>4 Baths</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>3 Parking</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-swimming-pool"></i>
+                                <span>Pool</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%204-Bedroom%20Villa%20in%20Thika%20Grove%20Estate%20(KES%2012,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 6 - Commercial Plot in Athi River -->
+                <div class="property-card" data-location="athi-river" data-type="plot" data-price="8.5m" data-bedrooms="0" data-status="available">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Commercial Plot in Athi River">
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 8,500,000</div>
+                        <h3 class="property-title">Commercial Plot</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Near Hawa Children's Home, Athi River
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span>100×100 ft</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-road"></i>
+                                <span>Access Road</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Electricity</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-store"></i>
+                                <span>Commercial</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%20Commercial%20Plot%20in%20Athi%20River%20(KES%208,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="6">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center" style="display: none; padding: 3rem;">
+                <h3>No properties match your filters</h3>
+                <p>Try adjusting your search criteria or <a href="https://wa.me/254721911181" target="_blank">WhatsApp us</a> for personalized property recommendations.</p>
+                <button id="resetFilters2" class="btn btn-primary" style="margin-top: 1rem;">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Block -->
+    <section class="trust-block">
+        <div class="container">
+            <div class="trust-content">
+                <h2>Why Buy Through Property By Fridah?</h2>
+                <p>We understand the fear of scams, unclear documents, and rushed decisions. That's why we do things differently.</p>
+                
+                <div class="trust-icons">
+                    <div class="trust-icon">
+                        <i class="fas fa-check-circle"></i>
+                        <span>All listings physically verified</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Site visits before payment</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Clear document explanation</span>
+                    </div>
+                    <div class="trust-icon">
+                        <i class="fas fa-handshake"></i>
+                        <span>No pressure to buy</span>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 2rem; font-weight: 500;">We help you buy safely — not rush you into decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sold Properties -->
+    <section class="sold-properties section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recently Sold Properties</h2>
+                <p>Properties that have been sold through Property By Fridah</p>
+            </div>
+            
+            <div class="sold-properties-grid">
+                <div class="sold-property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Sold Property">
+                    </div>
+                    <div class="sold-overlay">
+                        <div class="sold-text">SOLD</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 6,200,000</div>
+                        <h3 class="property-title">3-Bedroom Bungalow</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Milimani, Kitengela
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sold-property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Sold Property">
+                    </div>
+                    <div class="sold-overlay">
+                        <div class="sold-text">RESERVED</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 3,800,000</div>
+                        <h3 class="property-title">1/4 Acre Plot</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Thika Grove Estate
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sold-property-card">
+                    <div class="property-img">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1300&q=80" alt="Sold Property">
+                    </div>
+                    <div class="sold-overlay">
+                        <div class="sold-text">SOLD</div>
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 9,500,000</div>
+                        <h3 class="property-title">4-Bedroom House</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Ruiru
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about buying property through us</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-check-circle"></i> Are the properties verified?</h3>
+                    <p>Yes. All properties are checked for ownership and documentation before listing. We verify titles, beacons, and ownership history.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-map-marked-alt"></i> Can I visit before buying?</h3>
+                    <p>Absolutely. We strongly recommend and organize site visits for all serious buyers. Seeing is believing.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-user-tie"></i> Do you assist first-time buyers?</h3>
+                    <p>Yes. We specialize in guiding first-time buyers through the entire process, from viewing to documentation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-file-contract"></i> What documents should I expect?</h3>
+                    <p>Clean title deed, search certificate, mutation forms (if applicable), and sale agreement. We explain each document clearly.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-globe"></i> Do you work with diaspora clients?</h3>
+                    <p>Yes. We provide virtual tours, regular updates, and trusted local representation for clients abroad.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-handshake"></i> Is there pressure to buy quickly?</h3>
+                    <p>No. We believe in informed decisions. Take your time, ask questions, and only proceed when you're ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Find the Right Property?</h2>
+            <p>New listings move fast. Talk to us today and let's secure the right one for you with verified documentation and professional guidance.</p>
+            <div class="header-btns">
+                <a href="https://wa.me/254721911181" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Property By Fridah
+                </a>
+                <a href="#contact" class="btn btn-secondary">Book a Site Visit Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Property by Fridah</h3>
+                    <p>Your trusted real estate partner in Kenya. We help you buy property safely, confidently, and stress-free.</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/p/Property-By-Fridah-100077130176779/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@propertybyfridah"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/property_by_fridah_ke/reels/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@PropertybyFridah"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html#areas">Locations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p><a href="tel:+254721911181">+254 721 911 181</a></p>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <p><a href="https://wa.me/254721911181">+254 721 911 181</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p><a href="mailto:info@propertybyfridah.com">info@propertybyfridah.com</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                               <a href="https://maps.app.goo.gl/c8dcoQFntv1z1MRN8"> <p>Kitengela, Kajiado County, Kenya</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+             <div class="copyright">
+                <p>&copy; <span id="y"></span> Properties By Fridah. All rights reserved. |<a href="#" style="color: #28a745;">Privacy Policy</a> | <a href="#" style="color: #28a745;">Terms of Service</a></p>
+              <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://sarahadevelopers.co.ke"
+              target="_blank"
+              rel="noopener"
+              style="color: orange; text-decoration: none; font-weight: 500"
+            >
+              Saraha Developers Ltd.
+            </a>
+          </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/254721911181" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Property Details Modal -->
+    <div class="property-modal" id="propertyModal">
+        <div class="modal-content">
+            <div class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="properties.js">
+        
+    </script>
+</body>
+</html>
