@@ -22,30 +22,28 @@
 <body>
     <!-- Header & Navigation -->
       <!-- Header & Navigation -->
-    <header>
-      <div class="container">
-        <nav class="navbar">
-           <a href="index.html" class="logo">
-          <img
-            src="Property By Fridah favicon.webp"
-            alt="Property By Fridah favicon Logo"
-            class="logo-img"
-          />
-        </a>
-          <ul class="nav-links" id="navLinks">
-           <li><a href="/">Home</a></li>
-                    <li><a href="properties.html">Properties</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html#areas">Locations</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="contact.html" >Contact</a></li>
-          </ul>
-          <div class="mobile-menu" id="mobileMenu">
-            <i class="fas fa-bars"></i>
-          </div>
-        </nav>
+ <header>
+  <div id="overlay"></div>
+  <div class="container">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="Property By Fridah favicon.webp" alt="Logo" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html#areas">Locations</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-menu" id="mobileMenu">
+        <i class="fas fa-bars"></i>
       </div>
-    </header>
+    </nav>
+  </div>
+</header>
+
 
 
     <!-- Page Header -->
@@ -317,37 +315,7 @@
     </div>
   </div>
 
-  <!-- JS for Tabs -->
-  <script>
-    const tabs = document.querySelectorAll('.area-tab');
-    const details = document.querySelectorAll('.area-detail');
-    const areaImage = document.getElementById('areaImage');
-
-    const areaImages = {
-      'kitengela': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      'juja': 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      'ruiru': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      'thika': 'https://images.unsplash.com/photo-1581092795360-45b18b0de1f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      'athi-river': 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    };
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const area = tab.dataset.area;
-
-        // Remove active class from all tabs
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        // Remove active class from all details
-        details.forEach(d => d.classList.remove('active'));
-        document.getElementById(`${area}-content`).classList.add('active');
-
-        // Update main image
-        areaImage.src = areaImages[area];
-      });
-    });
-  </script>
+ 
 </section>
 
     <!-- Values Section -->
@@ -510,9 +478,40 @@
     </a>
 <!-- Area Modal -->
 
+<script>
+    const tabs = document.querySelectorAll('.area-tab');
+    const details = document.querySelectorAll('.area-detail');
+    const areaImage = document.getElementById('areaImage');
 
+    const areaImages = {
+      'kitengela': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      'juja': 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      'ruiru': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      'thika': 'https://images.unsplash.com/photo-1581092795360-45b18b0de1f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+      'athi-river': 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const area = tab.dataset.area;
+
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Remove active class from all details
+        details.forEach(d => d.classList.remove('active'));
+        document.getElementById(`${area}-content`).classList.add('active');
+
+        // Update main image
+        areaImage.src = areaImages[area];
+      });
+    });
+  </script>
     <script src="about.js">
        
     </script>
+     <!-- JS for Tabs -->
+  
 </body>
 </html>

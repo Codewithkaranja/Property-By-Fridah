@@ -1,31 +1,39 @@
+ document.addEventListener('DOMContentLoaded', () => {
  // Mobile Menu Toggle
-      // Mobile Menu Toggle
- const mobileMenuBtn = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
-const overlay = document.getElementById('overlay');
+     // Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenu');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('overlay');
 
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    overlay.classList.toggle('active');
+  if (!mobileMenuBtn || !navLinks || !overlay) return;
 
-    mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
-});
+  const toggleMenu = () => {
+    const isActive = navLinks.classList.toggle('active');
+    overlay.classList.toggle('active', isActive);
+    mobileMenuBtn.innerHTML = isActive
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  };
 
-document.querySelectorAll('#navLinks a').forEach(link => {
+  // Click hamburger
+  mobileMenuBtn.addEventListener('click', toggleMenu);
+
+  // Close on link click
+  navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
     });
-});
+  });
 
-overlay.addEventListener('click', () => {
+  // Close on overlay click
+  overlay.addEventListener('click', () => {
     navLinks.classList.remove('active');
     overlay.classList.remove('active');
     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-});
+  });
+
 
         
         // Set current year in footer
@@ -135,3 +143,4 @@ areaTabs.forEach(tab => {
         }, observerOptions);
         
         statNumbers.forEach(stat => observer.observe(stat));
+        });
