@@ -138,7 +138,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Meet Our CEO</h2>
-                <p>The visionary behind Property by Fridah</p>
+                <p >The visionary behind Property by Fridah</p>
             </div>
             
             <div class="ceo-content">
@@ -151,7 +151,7 @@
                 </div>
                 
                 <div>
-                    <h3>Fridah - Your Trusted Real Estate Advisor</h3>
+                    <h3 id="section-header-p">Fridah - Your Trusted Real Estate Advisor</h3>
                     <p>With over 7 years of experience in the Kenyan real estate market, Fridah has built Property by Fridah from the ground up. Her journey began in Kitengela, where she recognized the need for honest, transparent real estate services that put clients first.</p>
                     
                     <p>Fridah's approach is simple yet powerful: treat every client like family, verify every property thoroughly, and guide with expertise and empathy. Her deep knowledge of Kitengela, Juja, Ruiru, Thika, and surrounding areas comes from years of hands-on experience in these markets.</p>
@@ -385,6 +385,7 @@
     </section>
 
     <!-- Footer -->
+   <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -393,9 +394,9 @@
                     <p>Your trusted real estate partner in Kenya. We help you buy property safely, confidently, and stress-free.</p>
                     <div class="social-links">
                         <a href="https://web.facebook.com/p/Property-By-Fridah-100077130176779/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@propertybyfridah"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/property_by_fridah_ke/reels/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@PropertybyFridah"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -405,6 +406,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="properties.html">Properties</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html#areas">Locations</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -416,29 +418,48 @@
                         <li>
                             <i class="fas fa-phone-alt"></i>
                             <div>
-                                <p>+254 721 911 181</p>
-                                <p>Call or WhatsApp</p>
+                                <p><a href="tel:+254721911181">+254 721 911 181</a></p>
+                                
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <p><a href="https://wa.me/254721911181">+254 721 911 181</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <p>propertybyfridah@gmail.com</p>
+                                <p><a href="mailto:info@propertybyfridah.com">info@propertybyfridah.com</a></p>
                             </div>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <p>Kitengela, Kajiado County</p>
-                                <p>Kenya</p>
+                               <a href="https://maps.app.goo.gl/c8dcoQFntv1z1MRN8"> <p>Kitengela, Kajiado County, Kenya</p>
+                                </a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
             
-            <div class="copyright">
-                <p>&copy; <span id="currentYear"></span> Property by Fridah. All rights reserved.</p>
+             <div class="copyright">
+                <p>&copy; <span id="y"></span> Properties By Fridah. All rights reserved. |<a href="#" style="color: #28a745;">Privacy Policy</a> | <a href="#" style="color: #28a745;">Terms of Service</a></p>
+              <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+          <p style="margin: 0; font-size: 13px; color: #777">
+            Crafted with <span style="color: red">❤</span> by
+            <a
+              href="https://sarahadevelopers.co.ke"
+              target="_blank"
+              rel="noopener"
+              style="color: orange; text-decoration: none; font-weight: 500"
+            >
+              Saraha Developers Ltd.
+            </a>
+          </p>
             </div>
         </div>
     </footer>
