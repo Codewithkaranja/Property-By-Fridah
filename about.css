@@ -501,102 +501,131 @@
         }
         
         
-        /* Areas We Serve */
-        .areas-section {
-            background-color: var(--light-color);
-        }
-        
-        .areas-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .area-tab {
-            padding: 0.8rem 1.8rem;
-            background-color: white;
-            border: 2px solid var(--border-color);
-            border-radius: 4px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--text-color);
-        }
-        
-        .area-tab:hover, .area-tab.active {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-        
-        .areas-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-        
-        .area-detail {
-            display: none;
-        }
-        
-        .area-detail.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .area-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            height: 400px;
-        }
-        
-        .area-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .area-features {
-            margin: 1.5rem 0;
-        }
-        
-        .area-features li {
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.8rem;
-        }
-        
-        .area-features i {
-            color: var(--secondary-color);
-            margin-top: 0.2rem;
-        }
-        
-        .property-types {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .property-type-tag {
-            background-color: rgba(42, 157, 143, 0.1);
-            color: var(--secondary-color);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
+       /* Areas We Serve */
+/* Areas Section */
+.areas-section {
+    background-color: var(--light-color);
+    padding: 4rem 0;
+}
+
+/* Tabs */
+.areas-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.area-tab {
+    padding: 0.8rem 1.8rem;
+    background-color: white;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.area-tab:hover,
+.area-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Content + Image */
+.areas-content {
+    display: flex; /* changed from grid to flex */
+    gap: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Hide inactive content */
+.area-detail {
+    display: none;
+    flex: 1 1 400px; /* responsive width */
+}
+
+.area-detail.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Area Image */
+.area-image {
+    flex: 1 1 400px; /* responsive width */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    min-height: 400px;
+}
+
+.area-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Features & Property Types */
+.area-features {
+    margin: 1.5rem 0;
+}
+
+.area-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.area-features i {
+    color: var(--secondary-color);
+    margin-top: 0.2rem;
+}
+
+.property-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.property-type-tag {
+    background-color: rgba(42, 157, 143, 0.1);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .areas-content {
+        flex-direction: column; /* stack content on smaller screens */
+    }
+    .area-image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .area-image {
+        min-height: 250px;
+    }
+}
+
+
+
         /* Values Section */
         .values-section {
             background-color: black;

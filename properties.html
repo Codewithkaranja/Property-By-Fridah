@@ -131,7 +131,13 @@
         <div class="container">
             <div class="properties-grid" id="propertiesGrid">
                 <!-- Property 1 - 3 Bedroom Bungalow in Kitengela -->
-                <div class="property-card" data-location="kitengela" data-type="house" data-price="7.5m" data-bedrooms="3" data-status="available">
+                <div class="property-card" data-images='[
+       
+       "image - 2026-01-07T202327.609.webp",
+       "image - 2026-01-07T203209.316.webp",
+       "image - 2026-01-07T204337.046.webp"
+     ]'
+      data-location="kitengela" data-type="house" data-price="7.5m" data-bedrooms="3" data-status="available">
                     <div class="property-img">
                         <img src="image - 2026-01-07T202327.609.webp" alt="3-Bedroom Bungalow in Acacia Estate, Kitengela">
                         <div class="property-badge badge-new">NEW</div>
@@ -285,6 +291,7 @@
                     </div>
                 </div>
                 
+                
                 <!-- Property 5 - 4-Bedroom Villa in Thika -->
                 <div class="property-card" data-location="thika" data-type="house" data-price="12.5m" data-bedrooms="4" data-status="available">
                     <div class="property-img">
@@ -322,6 +329,8 @@
                         </div>
                     </div>
                 </div>
+             
+                
                 
                 <!-- Property 6 - Commercial Plot in Athi River -->
                 <div class="property-card" data-location="athi-river" data-type="plot" data-price="8.5m" data-bedrooms="0" data-status="available">
@@ -360,6 +369,45 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Property 7 - Commercial Plot in Athi River -->
+                <div class="property-card" data-location="ruiru" data-type="plot" data-price="10.5m" data-bedrooms="0" data-status="available">
+                    <div class="property-img">
+                        <img src="image - 2026-01-07T204544.357.webp" alt="Commercial Plot in Athi River">
+                        
+                    </div>
+                    <div class="property-details">
+                        <div class="property-price">KES 10,500,000</div>
+                        <h3 class="property-title">Commercial Plot</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i> Near Tatu City, Ruiru
+                        </div>
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-vector-square"></i>
+                                <span>100×100 ft</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-road"></i>
+                                <span>Access Road</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Electricity</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-store"></i>
+                                <span>Commercial</span>
+                            </div>
+                        </div>
+                        <div class="property-ctas">
+                            <a href="https://wa.me/254721911181?text=Hi,%20I'm%20interested%20in%20the%20Commercial%20Plot%20in%20Athi%20River%20(KES%208,500,000)" class="btn btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <button class="btn btn-outline view-details-btn" data-property="7">View Details</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- No Results Message -->
@@ -368,7 +416,10 @@
                 <p>Try adjusting your search criteria or <a href="https://wa.me/254721911181" target="_blank">WhatsApp us</a> for personalized property recommendations.</p>
                 <button id="resetFilters2" class="btn btn-primary" style="margin-top: 1rem;">Reset Filters</button>
             </div>
+            <div class="pagination" id="pagination"></div>
         </div>
+        
+
     </section>
 
     <!-- Trust Block -->
@@ -604,16 +655,26 @@
     </a>
 
     <!-- Property Details Modal -->
-    <div class="property-modal" id="propertyModal">
-        <div class="modal-content">
-            <div class="modal-close" id="modalClose">
-                <i class="fas fa-times"></i>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Modal content will be loaded here by JavaScript -->
-            </div>
+  <!-- Property Modal -->
+<div class="property-modal" id="propertyModal">
+    <div class="modal-content">
+        <!-- Close Button -->
+        <div class="modal-close" id="modalClose">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body" id="modalBody">
+            <!-- 
+                JavaScript will dynamically insert:
+                - Main image
+                - Thumbnails
+                - Property title, price, and location
+            -->
         </div>
     </div>
+</div>
+
 
     <script src="properties.js">
         
