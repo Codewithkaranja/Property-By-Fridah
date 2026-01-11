@@ -859,6 +859,11 @@
                 right: 1.5rem;
             }
         }
+
+       #threads{
+        color: white;
+        background-color: white;
+       }
         
         /* Form Success Message */
         .success-message {

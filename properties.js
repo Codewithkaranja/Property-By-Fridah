@@ -232,7 +232,7 @@ modalBody.querySelectorAll('.thumbnail').forEach(thumb => {
     thumb.addEventListener('click', () => {
         mainImageEl.src = thumb.src;
     });
-});
+ });
 
 
         modal.classList.add('active');

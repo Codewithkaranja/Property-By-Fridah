@@ -44,20 +44,22 @@ const areaTabs = document.querySelectorAll('.area-tab');
 const areaDetails = document.querySelectorAll('.area-detail');
 const areaImage = document.getElementById('areaImage');
 
-// Area images and alt texts
+// Area images and alt textss
 const areaImages = {
     'kitengela': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    'juja': 'https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    'ruiru': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    'thika': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-    'athi-river': 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+    'ngong': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    'syokimau': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    'ongata-rongai': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    'athi-river': 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+    'kilimani': 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
 };
 const areaAltTexts = {
     'kitengela': 'Kitengela Real Estate Properties',
-    'juja': 'Juja Real Estate Properties',
-    'ruiru': 'Ruiru Real Estate Properties',
-    'thika': 'Thika Real Estate Properties',
-    'athi-river': 'Athi River Real Estate Properties'
+    'ngong': 'Ngong Real Estate Properties',
+    'syokimau': 'Syokimau Real Estate Properties',
+    'ongata-rongai': 'Ongata-Rongai Real Estate Properties',
+    'athi-river': 'Athi-River Real Estate Properties',
+    'kilimani': 'Kilimai Real Estate Properties'
 };
 
 // Switch content on tab click

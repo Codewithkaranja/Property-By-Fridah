@@ -16,7 +16,82 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="#">
-    
+   <style>
+    .premium-services {
+  background-color: #fff;
+  padding: 4rem 1rem;
+}
+
+.services-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  padding: 0.8rem 1.8rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #1d4ed8; /* primary color */
+  color: #fff;
+  border-color: #1d4ed8;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .services-content {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    margin-top: 2rem;
+    height: 300px;
+  }
+}
+
+.service-detail {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.service-detail.active {
+  display: block;
+}
+
+.service-image {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+   </style>
     <link rel="stylesheet" href="services.css">
 </head>
 <body>
@@ -72,156 +147,180 @@
     </section>
 
     <!-- Premium Services -->
-    <section class="premium-services section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Premium Services</h2>
-                <p>Comprehensive real estate solutions tailored to your specific needs</p>
-            </div>
-            
-            <div class="services-tabs" id="servicesTabs">
-                <button class="tab-btn active" data-tab="property-sales">Property Sales</button>
-                <button class="tab-btn" data-tab="land-sales">Land & Plot Sales</button>
-                <button class="tab-btn" data-tab="investment">Investment Guidance</button>
-                <button class="tab-btn" data-tab="diaspora">Diaspora Services</button>
-                <button class="tab-btn" data-tab="consultation">Buyer Consultation</button>
-            </div>
-            
-            <div class="services-content">
-                <div class="service-detail active" id="property-sales-content">
-                    <h3>Residential Property Sales</h3>
-                    <p>We help you find and purchase the perfect home for your family. Our portfolio includes verified houses, bungalows, and apartments in secure, well-planned estates across Kitengela, Juja, Ruiru, and Thika.</p>
-                    
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Verified properties with clean titles</li>
-                        <li><i class="fas fa-check-circle"></i> Physical site visits before purchase</li>
-                        <li><i class="fas fa-check-circle"></i> Negotiation and price guidance</li>
-                        <li><i class="fas fa-check-circle"></i> Documentation and transfer support</li>
-                        <li><i class="fas fa-check-circle"></i> Post-purchase settling-in assistance</li>
-                    </ul>
-                    
-                    <div class="property-types">
-                        <h4>Property Types We Handle:</h4>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">3-Bedroom Bungalows</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Apartments</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Maisonettes</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Gated Community Homes</span>
-                        </div>
-                    </div>
-                    
-                    <a href="properties.html" class="btn btn-primary" style="margin-top: 2rem;">Browse Available Properties</a>
-                </div>
-                
-                <div class="service-detail" id="land-sales-content">
-                    <h3>Land & Plot Acquisition</h3>
-                    <p>Secure prime land in high-growth areas for your dream home or investment portfolio. We specialize in residential, commercial, and mixed-use plots with clear documentation and development potential.</p>
-                    
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Title deed verification and due diligence</li>
-                        <li><i class="fas fa-check-circle"></i> Plot beacons verification</li>
-                        <li><i class="fas fa-check-circle"></i> Infrastructure assessment (water, roads, electricity)</li>
-                        <li><i class="fas fa-check-circle"></i> Growth potential analysis</li>
-                        <li><i class="fas fa-check-circle"></i> Legal transfer process guidance</li>
-                    </ul>
-                    
-                    <div class="property-types">
-                        <h4>Plot Types Available:</h4>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Residential Plots</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Commercial Plots</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Agricultural Land</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Mixed-Use Plots</span>
-                        </div>
-                    </div>
-                    
-                    <a href="properties.html" class="btn btn-primary" style="margin-top: 2rem;">View Available Land</a>
-                </div>
-                
-                <div class="service-detail" id="investment-content">
-                    <h3>Property Investment Guidance</h3>
-                    <p>Make informed investment decisions with our market analysis and strategic guidance. Whether you're a first-time investor or expanding your portfolio, we provide insights to maximize returns.</p>
-                    
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Market trend analysis and forecasting</li>
-                        <li><i class="fas fa-check-circle"></i> High-growth area identification</li>
-                        <li><i class="fas fa-check-circle"></i> Rental yield calculations</li>
-                        <li><i class="fas fa-check-circle"></i> Property valuation services</li>
-                        <li><i class="fas fa-check-circle"></i> Portfolio diversification advice</li>
-                        <li><i class="fas fa-check-circle"></i> Exit strategy planning</li>
-                    </ul>
-                    
-                    <div class="property-types">
-                        <h4>Investment Focus Areas:</h4>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Kitengela</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Juja</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Ruiru</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Thika</span>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/254721911181?text=Hi,%20I'd%20like%20investment%20guidance%20for%20property%20in%20Kenya" class="btn btn-primary" style="margin-top: 2rem;" target="_blank">Get Investment Advice</a>
-                </div>
-                
-                <div class="service-detail" id="diaspora-content">
-                    <h3>Diaspora Real Estate Services</h3>
-                    <p>We make it easy for Kenyans abroad to invest in property back home. Our remote support system ensures you can buy, manage, and monitor your Kenyan property from anywhere in the world.</p>
-                    
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Virtual property tours via video call</li>
-                        <li><i class="fas fa-check-circle"></i> Document scanning and digital sharing</li>
-                        <li><i class="fas fa-check-circle"></i> Trusted local representation</li>
-                        <li><i class="fas fa-check-circle"></i> Regular property updates with photos/videos</li>
-                        <li><i class="fas fa-check-circle"></i> Rental management services</li>
-                        <li><i class="fas fa-check-circle"></i> Construction progress monitoring</li>
-                    </ul>
-                    
-                    <div class="property-types">
-                        <h4>Countries We Serve Diaspora Clients From:</h4>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">USA</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">UK</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Canada</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Australia</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#diaspora-services" class="btn btn-primary" style="margin-top: 2rem;">Learn More</a>
-                </div>
-                
-                <div class="service-detail" id="consultation-content">
-                    <h3>Buyer Consultation & Support</h3>
-                    <p>Our personalized consultation service helps you navigate the property buying process with confidence. We answer your questions, address concerns, and provide step-by-step guidance.</p>
-                    
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Free initial consultation</li>
-                        <li><i class="fas fa-check-circle"></i> Budget planning and financing options</li>
-                        <li><i class="fas fa-check-circle"></i> Property search based on your criteria</li>
-                        <li><i class="fas fa-check-circle"></i> Site visit organization</li>
-                        <li><i class="fas fa-check-circle"></i> Document review and explanation</li>
-                        <li><i class="fas fa-check-circle"></i> Negotiation support</li>
-                    </ul>
-                    
-                    <div class="property-types">
-                        <h4>Who Benefits From Consultation:</h4>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">First-Time Buyers</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Property Investors</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Diaspora Clients</span>
-                            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Retirees</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">Book Free Consultation</a>
-                </div>
-                
-                <div class="service-image">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Real Estate Services in Kenya">
-                </div>
-            </div>
+   <section class="premium-services section-padding">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2>Our Premium Services</h2>
+      <p>Comprehensive real estate solutions tailored to your specific needs</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="services-tabs">
+      <button class="tab-btn active" data-tab="property-sales">Property Sales</button>
+      <button class="tab-btn" data-tab="land-sales">Land & Plot Sales</button>
+      <button class="tab-btn" data-tab="property-management">Property Management</button>
+      <button class="tab-btn" data-tab="investment">Investment Guidance</button>
+      <button class="tab-btn" data-tab="diaspora">Diaspora Services</button>
+      <button class="tab-btn" data-tab="consultation">Buyer Consultation</button>
+      
+    </div>
+
+    <!-- Services Content -->
+    <div class="services-content">
+
+      <!-- Property Sales -->
+      <div class="service-detail active" id="property-sales-content">
+        <h3>Residential Property Sales</h3>
+        <p>We help you find and purchase the perfect home for your family. Our portfolio includes verified houses, bungalows, and apartments in secure, well-planned estates across Kitengela, Juja, Ruiru, and Thika.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Verified properties with clean titles</li>
+          <li><i class="fas fa-check-circle"></i> Physical site visits before purchase</li>
+          <li><i class="fas fa-check-circle"></i> Negotiation and price guidance</li>
+          <li><i class="fas fa-check-circle"></i> Documentation and transfer support</li>
+          <li><i class="fas fa-check-circle"></i> Post-purchase settling-in assistance</li>
+        </ul>
+        <div class="property-types">
+          <h4>Property Types We Handle:</h4>
+          <div class="type-list">
+            <span>3-Bedroom Bungalows</span>
+            <span>Apartments</span>
+            <span>Maisonettes</span>
+            <span>Gated Community Homes</span>
+          </div>
         </div>
-    </section>
+        <a href="properties.html" class="btn btn-primary">Browse Available Properties</a>
+      </div>
+
+      <!-- Land Sales -->
+      <div class="service-detail" id="land-sales-content">
+        <h3>Land & Plot Acquisition</h3>
+        <p>Secure prime land in high-growth areas for your dream home or investment portfolio. We specialize in residential, commercial, and mixed-use plots with clear documentation and development potential.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Title deed verification and due diligence</li>
+          <li><i class="fas fa-check-circle"></i> Plot beacons verification</li>
+          <li><i class="fas fa-check-circle"></i> Infrastructure assessment (water, roads, electricity)</li>
+          <li><i class="fas fa-check-circle"></i> Growth potential analysis</li>
+          <li><i class="fas fa-check-circle"></i> Legal transfer process guidance</li>
+        </ul>
+        <div class="property-types">
+          <h4>Plot Types Available:</h4>
+          <div class="type-list">
+            <span>Residential Plots</span>
+            <span>Commercial Plots</span>
+            <span>Agricultural Land</span>
+            <span>Mixed-Use Plots</span>
+          </div>
+        </div>
+        <a href="properties.html" class="btn btn-primary">View Available Land</a>
+      </div>
+      <div class="service-detail" id="property-management-content">
+    <h3>Property Management Services</h3>
+    <p>We take the hassle out of managing your rental properties. From finding reliable tenants to collecting rent and handling day-to-day management, we ensure your investment works for you.</p>
+    
+    <ul class="service-features">
+        <li><i class="fas fa-check-circle"></i> Tenant sourcing and screening</li>
+        <li><i class="fas fa-check-circle"></i> Rent collection and timely payments</li>
+        <li><i class="fas fa-check-circle"></i> Property maintenance coordination</li>
+        <li><i class="fas fa-check-circle"></i> Lease agreement management</li>
+        <li><i class="fas fa-check-circle"></i> Regular property inspections and reports</li>
+        <li><i class="fas fa-check-circle"></i> Handling tenant issues and disputes</li>
+    </ul>
+    
+    <div class="property-types">
+        <h4>Property Types We Manage:</h4>
+        <div class="type-list" style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Apartments</span>
+            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Houses</span>
+            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Gated Communities</span>
+            <span style="background-color: #f0f8ff; padding: 0.5rem 1rem; border-radius: 4px;">Commercial Rentals</span>
+        </div>
+    </div>
+    
+   <a href="https://wa.me/254721911181?text=Hi,%20I'd%20like%20Property%20Management%20Help" target="_blank" class="btn btn-primary">Get Property Management Help</a>
+</div>
+
+
+      <!-- Investment Guidance -->
+      <div class="service-detail" id="investment-content">
+        <h3>Property Investment Guidance</h3>
+        <p>Make informed investment decisions with our market analysis and strategic guidance. Whether you're a first-time investor or expanding your portfolio, we provide insights to maximize returns.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Market trend analysis and forecasting</li>
+          <li><i class="fas fa-check-circle"></i> High-growth area identification</li>
+          <li><i class="fas fa-check-circle"></i> Rental yield calculations</li>
+          <li><i class="fas fa-check-circle"></i> Property valuation services</li>
+          <li><i class="fas fa-check-circle"></i> Portfolio diversification advice</li>
+          <li><i class="fas fa-check-circle"></i> Exit strategy planning</li>
+        </ul>
+        <div class="property-types">
+          <h4>Investment Focus Areas:</h4>
+          <div class="type-list">
+            <span>Kitengela</span>
+            <span>Juja</span>
+            <span>Ruiru</span>
+            <span>Thika</span>
+          </div>
+        </div>
+        <a href="https://wa.me/254721911181?text=Hi,%20I'd%20like%20investment%20guidance%20for%20property%20in%20Kenya" target="_blank" class="btn btn-primary">Get Investment Advice</a>
+      </div>
+
+      <!-- Diaspora Services -->
+      <div class="service-detail" id="diaspora-content">
+        <h3>Diaspora Real Estate Services</h3>
+        <p>We make it easy for Kenyans abroad to invest in property back home. Our remote support system ensures you can buy, manage, and monitor your Kenyan property from anywhere in the world.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Virtual property tours via video call</li>
+          <li><i class="fas fa-check-circle"></i> Document scanning and digital sharing</li>
+          <li><i class="fas fa-check-circle"></i> Trusted local representation</li>
+          <li><i class="fas fa-check-circle"></i> Regular property updates with photos/videos</li>
+          <li><i class="fas fa-check-circle"></i> Rental management services</li>
+          <li><i class="fas fa-check-circle"></i> Construction progress monitoring</li>
+        </ul>
+        <div class="property-types">
+          <h4>Countries We Serve Diaspora Clients From:</h4>
+          <div class="type-list">
+            <span>USA</span>
+            <span>UK</span>
+            <span>Canada</span>
+            <span>Australia</span>
+          </div>
+        </div>
+        <a href="#diaspora-services" class="btn btn-primary">Learn More</a>
+      </div>
+
+      <!-- Buyer Consultation -->
+      <div class="service-detail" id="consultation-content">
+        <h3>Buyer Consultation & Support</h3>
+        <p>Our personalized consultation service helps you navigate the property buying process with confidence. We answer your questions, address concerns, and provide step-by-step guidance.</p>
+        <ul class="service-features">
+          <li><i class="fas fa-check-circle"></i> Free initial consultation</li>
+          <li><i class="fas fa-check-circle"></i> Budget planning and financing options</li>
+          <li><i class="fas fa-check-circle"></i> Property search based on your criteria</li>
+          <li><i class="fas fa-check-circle"></i> Site visit organization</li>
+          <li><i class="fas fa-check-circle"></i> Document review and explanation</li>
+          <li><i class="fas fa-check-circle"></i> Negotiation support</li>
+        </ul>
+        <div class="property-types">
+          <h4>Who Benefits From Consultation:</h4>
+          <div class="type-list">
+            <span>First-Time Buyers</span>
+            <span>Property Investors</span>
+            <span>Diaspora Clients</span>
+            <span>Retirees</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Book Free Consultation</a>
+      </div>
+
+      <!-- Service Image -->
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Real Estate Services in Kenya">
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- Process Section -->
     <section class="process-section section-padding">
@@ -372,41 +471,176 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials section-padding">
-        <div class="container">
-            <div class="section-header">
-                <h2>Client Success Stories</h2>
-                <p>Hear from clients who found their property with our guidance</p>
-            </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"As a first-time buyer, I was nervous about the process. Fridah walked me through every step, explained all the documents, and even helped me negotiate a better price. I now have my dream home in Kitengela, and the process was completely stress-free."</p>
-                    <div class="client-info">
-                        <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="testimonials"></div>
-                        <div>
-                            <h4>Samuel & Grace Mwangi</h4>
-                            <p>First-Time Home Buyers, Kitengela</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
+
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Start Your Property Journey?</h2>
-            <p>Whether you're buying your first home, investing in land, or managing property from abroad, we're here to help. Schedule a free consultation to discuss your needs.</p>
-            <div class="header-btns">
-                <a href="https://wa.me/254721911181" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp for Consultation
-                </a>
-                <a href="#contact" class="btn btn-secondary">Schedule a Call</a>
-            </div>
+  <section class="testimonials section-padding">
+  <div class="container">
+    <div class="section-header">
+      <h2>Client Success Stories</h2>
+      <p>Hear from clients who found their property with our guidance</p>
+    </div>
+
+    <div class="testimonial-slider">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial active">
+        <div class="stars">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
         </div>
-    </section>
+        <p>"As a first-time buyer, I was nervous about the process. Fridah walked me through every step, explained all the documents, and even helped me negotiate a better price. I now have my dream home in Kitengela, and the process was completely stress-free."</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Samuel & Grace Mwangi"></div>
+          <div>
+            <h4>Samuel & Grace Mwangi</h4>
+            <p>First-Time Home Buyers, Kitengela</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"I invested in a duplex in Syokimau, and Fridah’s guidance was exceptional. She gave honest advice, helped with paperwork, and even recommended reliable contractors. I couldn’t ask for a better experience."</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Rose & Daniel Mwangi"></div>
+          <div>
+            <h4>Rose & Daniel Mwangi</h4>
+            <p>Investors, Syokimau</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Buying an apartment in Ongata Rongai was daunting, but Fridah made everything simple. She answered all my questions, explained every step, and even gave tips on property management. I’m extremely satisfied!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Michael & Jane Njoroge"></div>
+          <div>
+            <h4>Michael & Jane Njoroge</h4>
+            <p>Homeowners, Ongata Rongai</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Fridah helped us invest in Kilimani, and her insights were invaluable. She is professional, honest, and always available to answer questions. Our investment has already appreciated significantly!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Lucy & Peter Otieno"></div>
+          <div>
+            <h4>Lucy & Peter Otieno</h4>
+            <p>Investors, Kilimani</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"We were looking for a family home in Ngong, and Fridah delivered above expectations. She handled negotiations, paperwork, and even suggested renovation ideas. Highly professional!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Kenneth & Sarah Wanjiku"></div>
+          <div>
+            <h4>Kenneth & Sarah Wanjiku</h4>
+            <p>Homeowners, Ngong</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Athi River was a tricky market, but Fridah’s guidance made our investment secure and profitable. Her knowledge and honesty are unmatched. We’ll definitely work with her again!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="John & Martha Mutua"></div>
+          <div>
+            <h4>John & Martha Mutua</h4>
+            <p>Investors, Athi River</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 7 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Fridah helped us secure a property in Kitengela despite the competitive market. Everything from negotiations to final documents was smooth. Highly recommend her services!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Mary & John Kamau"></div>
+          <div>
+            <h4>Mary & John Kamau</h4>
+            <p>Homeowners, Kitengela</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 8 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Buying our plot in Ruiru was simple thanks to Fridah. She guided us through legal checks, financing, and even recommended excellent surveyors. Truly exceptional service!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Emily & Patrick Ochieng"></div>
+          <div>
+            <h4>Emily & Patrick Ochieng</h4>
+            <p>Homeowners, Ruiru</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 9 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"Fridah handled everything for our investment in Thika. She explained risks, guided negotiations, and helped us get the best deal possible. Highly trustworthy!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="Daniel & Sarah Kimani"></div>
+          <div>
+            <h4>Daniel & Sarah Kimani</h4>
+            <p>Investors, Thika</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 10 -->
+      <div class="testimonial">
+        <div class="stars">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </div>
+        <p>"We were skeptical about property investment in Kitengela, but Fridah made it easy and rewarding. She’s transparent, patient, and extremely knowledgeable. Highly recommend!"</p>
+        <div class="client-info">
+          <div class="client-avatar"><img src="Property By Fridah favicon.webp" alt="John & Mary Mutua"></div>
+          <div>
+            <h4>John & Mary Mutua</h4>
+            <p>Investors, Kitengela</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- Footer -->
     <!-- Footer -->
@@ -421,6 +655,7 @@
                         <a href="https://www.tiktok.com/@propertybyfridah"><i class="fa-brands fa-tiktok"></i></a>
                         <a href="https://www.instagram.com/property_by_fridah_ke/reels/"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.youtube.com/@PropertybyFridah"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.threads.com/@property_by_fridah_ke?xmt=AQF0xrvzl41pzIrix03yYauxy88GIOW3H6BOvliycjsNOHY"><img src="image threads2.png" alt="threads icon"></a>
                     </div>
                 </div>
                 
@@ -461,7 +696,7 @@
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                               <a href="https://maps.app.goo.gl/c8dcoQFntv1z1MRN8"> <p>Kitengela, Kajiado County, Kenya</p>
+                               <a href="https://maps.app.goo.gl/VaJbquwG8qCJ3Tb18"> <p>NewTon House (Jamii Bora Bank), Kitengela, Kajiado County, Kenya</p>
                                 </a>
                             </div>
                         </li>
@@ -495,6 +730,24 @@
 
     <script src="services.js">
       
-    </script>
+    </script> 
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const testimonials = document.querySelectorAll('.testimonial');
+  let current = 0;
+
+  setInterval(() => {
+    // hide current testimonial
+    testimonials[current].classList.remove('active');
+
+    // move to next testimonial
+    current = (current + 1) % testimonials.length;
+
+    // show next testimonial
+    testimonials[current].classList.add('active');
+  }, 3000); // 5000ms = 5 seconds
+});
+</script>
+<script src="tabs.js"></script>
 </body>
 </html>

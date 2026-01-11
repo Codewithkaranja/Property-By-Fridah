@@ -624,6 +624,16 @@
     }
 }
 
+.areas-section {
+    position: relative;
+    z-index: 2;
+}
+
+.area-tab {
+    position: relative;
+    z-index: 3;
+}
+
 
 
         /* Values Section */
@@ -984,3 +994,5 @@
         bottom: 1.5rem; right: 1.5rem;
     }
 }
+
+
