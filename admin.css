@@ -1,0 +1,218 @@
+/* admin.css */
+
+/* Reset some basic elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Common Buttons */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.btn-outline:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Login Section */
+#loginSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#loginForm {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+#loginForm h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #28a745;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+#loginForm input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#loginForm input:focus {
+    border-color: #28a745;
+}
+
+/* Admin Panel */
+#adminSection {
+    padding: 2rem;
+    display: none;
+}
+
+#adminSection h2 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+/* Property Form */
+#propertyForm {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+#propertyForm .form-group {
+    margin-bottom: 1rem;
+}
+
+#propertyForm label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+#propertyForm input,
+#propertyForm select,
+#propertyForm textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+#propertyForm input:focus,
+#propertyForm select:focus,
+#propertyForm textarea:focus {
+    border-color: #28a745;
+}
+
+#propertyForm textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Property Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+thead {
+    background-color: #28a745;
+    color: #fff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Logout Button */
+#logoutBtn {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #propertyForm input,
+    #propertyForm select,
+    #propertyForm textarea {
+        font-size: 14px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    tbody td {
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: 500;
+    }
+}

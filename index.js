@@ -29,6 +29,7 @@ overlay.addEventListener('click', () => {
     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
 });
 
+
     // =========================
     // Set current year in footer
     // =========================

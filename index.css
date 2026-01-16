@@ -1253,3 +1253,29 @@
         display: block;
     }
 }
+.testimonial {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.testimonial.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.testimonials {
+    background-color: var(--primary-color);
+    padding: 6rem 0;
+    color: black;
+}
+.testimonial-slider {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1200; /* add this */
+}
+
+
+
