@@ -11,8 +11,7 @@ const propertySchema = new mongoose.Schema({
   size: String,
   status: { type: String, default: 'available' },
   description: String,
-  images: [String],
-  createdAt: { type: Date, default: Date.now }
-});
+  images: [String]
+}, { timestamps: true }); // ✅ adds createdAt and updatedAt automatically
 
 module.exports = mongoose.model('Property', propertySchema);
